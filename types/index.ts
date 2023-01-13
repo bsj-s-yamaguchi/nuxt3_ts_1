@@ -1,0 +1,1 @@
+export {CatResponse} from './cat'
