@@ -9,8 +9,8 @@ const { pending, error, data, refresh } = useFetch<CatResponse[]>(
 <template>
   <div>
     <div class="top">
-      <app-title />
-      <refresh-button @click="refresh()" />
+      <AppTitle />
+      <RefreshButton @click="refresh()" />
     </div>
 
     <div>
@@ -22,7 +22,7 @@ const { pending, error, data, refresh } = useFetch<CatResponse[]>(
     </div>
 
     <div v-if="!pending && data" class="content">
-      <cat-card-list :cat-list="data" />
+      <CatCardList :cat-list="data" />
     </div>
   </div>
 </template>
